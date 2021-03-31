@@ -24,4 +24,25 @@ class MoviesTest {
     void testMovieId() {
         assertSame(movie1, movie3);
     }
+
+    //Object Equality
+    @Test
+    void testMovieEquality() {
+        assertEquals(movie1, movie3);
+    }
+
+    //Failing Test
+
+    //Timeouts
+    @Test
+    void testMovieTimeouts() {
+        assertEquals(movie1, movie3);
+    }
+
+   //Disabling Tests
+   // @Test
+   // void testMovieDisablingTest() {
+   //     assertNotEquals(movie1.getType(), movie2.getType());
+   //     System.out.println("Keenan disabled this");
+   // }
 }
