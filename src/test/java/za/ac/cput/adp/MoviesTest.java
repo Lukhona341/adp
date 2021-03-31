@@ -1,7 +1,8 @@
 package za.ac.cput.adp;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.Disabled;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,18 +33,23 @@ class MoviesTest {
     }
 
     //Failing Test
-
-
-   @Timeouts(1000)
     @Test
-    void testMovieTimeouts() {
+    void failTest() {
+        fail("This test failed");
+    }
+
+    //Timeout
+    @Timeout(5)
+    @Test
+    void timeouts() {
         assertEquals(movie1, movie3);
     }
 
-    @Disable
+    //Disable Test
+    @Disabled
     @Test
     void disablingTest() {
-        assertNotEquals(movie1.getType(), movie2.getType());
+        assertEquals(movie1.getType(), movie2.getType());
         System.out.println("Keenan disabled this");
     }
 }
