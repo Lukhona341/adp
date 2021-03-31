@@ -33,16 +33,17 @@ class MoviesTest {
 
     //Failing Test
 
-    //Timeouts
+
+   @Timeouts(1000)
     @Test
     void testMovieTimeouts() {
         assertEquals(movie1, movie3);
     }
 
-   //Disabling Tests
-   // @Test
-   // void testMovieDisablingTest() {
-   //     assertNotEquals(movie1.getType(), movie2.getType());
-   //     System.out.println("Keenan disabled this");
-   // }
+    @Disable
+    @Test
+    void disablingTest() {
+        assertNotEquals(movie1.getType(), movie2.getType());
+        System.out.println("Keenan disabled this");
+    }
 }
