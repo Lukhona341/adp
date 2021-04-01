@@ -39,7 +39,7 @@ class MoviesTest {
     }
 
     //Timeout
-    @Timeout(5)
+    @Timeout(100)
     @Test
     void timeouts() {
         assertEquals(movie1, movie3);
