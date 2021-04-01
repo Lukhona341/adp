@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MoviesTest {
 
-    //Not local because im lazy
     private Movies movie1;
     private Movies movie2;
     private Movies movie3;
