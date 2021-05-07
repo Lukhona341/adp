@@ -20,9 +20,9 @@ class AsandaTest {
 
     @BeforeEach
     void setUp() {
-        asanda1 = new Asanda();
-        asanda2 = new Asanda();
-        asanda3 = new Asanda();
+        asanda1 = asanda1;
+        asanda2 = asanda1;
+        asanda3 = asanda2;
     }
     @Test
     void testEquality(){
